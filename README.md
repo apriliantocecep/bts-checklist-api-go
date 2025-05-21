@@ -42,8 +42,8 @@ A simple and secure RESTful API for managing checklists and tasks, built using t
 ## ⚙️ Getting Started
 
 1. Clone the repo
-2. Setup `.env` file with your DB and JWT settings
-3. Run migrations (auto or manually)
+2. Setup `.env` file with your DB and JWT settings. You can duplicate from file `.env.example`
+3. Run migrations (automatically migrate)
 4. Start the server
 
 ```bash
