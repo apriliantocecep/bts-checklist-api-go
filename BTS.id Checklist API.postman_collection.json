@@ -1,0 +1,1010 @@
+{
+	"info": {
+		"_postman_id": "3596e21e-7714-4e2f-a261-654dc2e4887f",
+		"name": "BTS.id Checklist API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2801839"
+	},
+	"item": [
+		{
+			"name": "checklist",
+			"item": [
+				{
+					"name": "item",
+					"item": [
+						{
+							"name": "get checklist items",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/checklist/:checklistId/item",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"checklist",
+										":checklistId",
+										"item"
+									],
+									"variable": [
+										{
+											"key": "checklistId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/checklist/:checklistId/item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"checklist",
+												":checklistId",
+												"item"
+											],
+											"variable": [
+												{
+													"key": "checklistId",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 21 May 2025 09:39:16 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "435"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"ID\": 3,\n        \"CreatedAt\": \"2025-05-21T16:38:56.731622+07:00\",\n        \"UpdatedAt\": \"2025-05-21T16:39:13.115021+07:00\",\n        \"DeletedAt\": null,\n        \"itemName\": \"Item 1 RENAMED\",\n        \"status\": 0,\n        \"checklist_id\": 2,\n        \"Checklist\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"name\": \"\",\n            \"user_id\": 0,\n            \"User\": {\n                \"ID\": 0,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null,\n                \"email\": \"\",\n                \"username\": \"\"\n            }\n        }\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "create new checklist items",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"itemName\": \"Item 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/checklist/:checklistId/item",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"checklist",
+										":checklistId",
+										"item"
+									],
+									"variable": [
+										{
+											"key": "checklistId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"itemName\": \"Item 1\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/checklist/:checklistId/item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"checklist",
+												":checklistId",
+												"item"
+											],
+											"variable": [
+												{
+													"key": "checklistId",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 21 May 2025 09:38:56 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "425"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"ID\": 3,\n    \"CreatedAt\": \"2025-05-21T16:38:56.731622+07:00\",\n    \"UpdatedAt\": \"2025-05-21T16:38:56.731622+07:00\",\n    \"DeletedAt\": null,\n    \"itemName\": \"Item 1\",\n    \"status\": 0,\n    \"checklist_id\": 2,\n    \"Checklist\": {\n        \"ID\": 0,\n        \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n        \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n        \"DeletedAt\": null,\n        \"name\": \"\",\n        \"user_id\": 0,\n        \"User\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"email\": \"\",\n            \"username\": \"\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "get item by checklist id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"itemName\": \"Item 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/checklist/:checklistId/item/:checklistItemId",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"checklist",
+										":checklistId",
+										"item",
+										":checklistItemId"
+									],
+									"variable": [
+										{
+											"key": "checklistId",
+											"value": "2"
+										},
+										{
+											"key": "checklistItemId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"itemName\": \"Item 1\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/checklist/:checklistId/item/:checklistItemId",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"checklist",
+												":checklistId",
+												"item",
+												":checklistItemId"
+											],
+											"variable": [
+												{
+													"key": "checklistId",
+													"value": "2"
+												},
+												{
+													"key": "checklistItemId",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 21 May 2025 09:37:06 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "423"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"ID\": 2,\n    \"CreatedAt\": \"2025-05-21T16:36:22.20989+07:00\",\n    \"UpdatedAt\": \"2025-05-21T16:36:22.20989+07:00\",\n    \"DeletedAt\": null,\n    \"itemName\": \"Item 1\",\n    \"status\": 0,\n    \"checklist_id\": 2,\n    \"Checklist\": {\n        \"ID\": 0,\n        \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n        \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n        \"DeletedAt\": null,\n        \"name\": \"\",\n        \"user_id\": 0,\n        \"User\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"email\": \"\",\n            \"username\": \"\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "toggle status item",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"itemName\": \"Item 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/checklist/:checklistId/item/:checklistItemId",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"checklist",
+										":checklistId",
+										"item",
+										":checklistItemId"
+									],
+									"variable": [
+										{
+											"key": "checklistId",
+											"value": "2"
+										},
+										{
+											"key": "checklistItemId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"itemName\": \"Item 1\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/checklist/:checklistId/item/:checklistItemId",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"checklist",
+												":checklistId",
+												"item",
+												":checklistItemId"
+											],
+											"variable": [
+												{
+													"key": "checklistId",
+													"value": "2"
+												},
+												{
+													"key": "checklistItemId",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 21 May 2025 09:37:32 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "465"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"item\": {\n        \"ID\": 2,\n        \"CreatedAt\": \"2025-05-21T16:36:22.20989+07:00\",\n        \"UpdatedAt\": \"2025-05-21T16:37:32.363775+07:00\",\n        \"DeletedAt\": null,\n        \"itemName\": \"Item 1\",\n        \"status\": 1,\n        \"checklist_id\": 2,\n        \"Checklist\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"name\": \"\",\n            \"user_id\": 0,\n            \"User\": {\n                \"ID\": 0,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null,\n                \"email\": \"\",\n                \"username\": \"\"\n            }\n        }\n    },\n    \"message\": \"Item marked as done\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete item",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"itemName\": \"Item 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/checklist/:checklistId/item/:checklistItemId",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"checklist",
+										":checklistId",
+										"item",
+										":checklistItemId"
+									],
+									"variable": [
+										{
+											"key": "checklistId",
+											"value": "2"
+										},
+										{
+											"key": "checklistItemId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "204",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"itemName\": \"Item 1\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/checklist/:checklistId/item/:checklistItemId",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"checklist",
+												":checklistId",
+												"item",
+												":checklistItemId"
+											],
+											"variable": [
+												{
+													"key": "checklistId",
+													"value": "2"
+												},
+												{
+													"key": "checklistItemId",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 21 May 2025 09:38:02 GMT"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "rename item",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"itemName\": \"Item 1 RENAMED\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/checklist/:checklistId/item/rename/:checklistItemId",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"checklist",
+										":checklistId",
+										"item",
+										"rename",
+										":checklistItemId"
+									],
+									"variable": [
+										{
+											"key": "checklistId",
+											"value": "2"
+										},
+										{
+											"key": "checklistItemId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"itemName\": \"Item 1 RENAMED\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/checklist/:checklistId/item/rename/:checklistItemId",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"checklist",
+												":checklistId",
+												"item",
+												"rename",
+												":checklistItemId"
+											],
+											"variable": [
+												{
+													"key": "checklistId",
+													"value": "2"
+												},
+												{
+													"key": "checklistItemId",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 21 May 2025 09:39:12 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "433"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"ID\": 3,\n    \"CreatedAt\": \"2025-05-21T16:38:56.731622+07:00\",\n    \"UpdatedAt\": \"2025-05-21T16:39:13.115021+07:00\",\n    \"DeletedAt\": null,\n    \"itemName\": \"Item 1 RENAMED\",\n    \"status\": 0,\n    \"checklist_id\": 2,\n    \"Checklist\": {\n        \"ID\": 0,\n        \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n        \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n        \"DeletedAt\": null,\n        \"name\": \"\",\n        \"user_id\": 0,\n        \"User\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"email\": \"\",\n            \"username\": \"\"\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "get all checklist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/checklist",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"checklist"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/checklist",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"checklist"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 21 May 2025 09:41:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "282"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"ID\": 2,\n        \"CreatedAt\": \"2025-05-21T16:25:27.194881+07:00\",\n        \"UpdatedAt\": \"2025-05-21T16:25:27.194881+07:00\",\n        \"DeletedAt\": null,\n        \"name\": \"checklist 1\",\n        \"user_id\": 1,\n        \"User\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"email\": \"\",\n            \"username\": \"\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "create new checklist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"checklist 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/checklist",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"checklist"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"checklist 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/checklist",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"checklist"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 21 May 2025 09:25:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "280"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ID\": 2,\n    \"CreatedAt\": \"2025-05-21T16:25:27.194881+07:00\",\n    \"UpdatedAt\": \"2025-05-21T16:25:27.194881+07:00\",\n    \"DeletedAt\": null,\n    \"name\": \"checklist 1\",\n    \"user_id\": 1,\n    \"User\": {\n        \"ID\": 0,\n        \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n        \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n        \"DeletedAt\": null,\n        \"email\": \"\",\n        \"username\": \"\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete checklist by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/checklist/:checklistId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"checklist",
+								":checklistId"
+							],
+							"variable": [
+								{
+									"key": "checklistId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "204",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/checklist/:checklistId",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"checklist",
+										":checklistId"
+									],
+									"variable": [
+										{
+											"key": "checklistId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 21 May 2025 09:25:00 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"cecepaprilianto\",\n    \"password\": \"rahasia\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"cecepaprilianto\",\n    \"password\": \"rahasia\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 21 May 2025 09:21:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "153"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDgwNzg1MTUsImlhdCI6MTc0NzgxOTMxNSwic3ViIjoiMSJ9.oXIZmtSxB9b5aLBeFOUCCj9el83KuoH5J7BaxKNZuyo\"\n}"
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"cecepaprilianto@gmail.com\",\n    \"username\": \"cecepaprilianto\",\n    \"password\": \"rahasia\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"cecepaprilianto@gmail.com\",\n    \"username\": \"cecepaprilianto\",\n    \"password\": \"rahasia\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 21 May 2025 08:44:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"user created\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyfQ.9YCOE7tXJFvXEkLKezdd42NArXH6JXLtHbQu-KrwQSA",
+			"type": "string"
+		}
+	]
+}
